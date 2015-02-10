@@ -5,7 +5,8 @@ class RomanNumeralGenerator(object):
         return roman
 
     def to_roman(self, number):
-        if(number == 2):
-            return('II')
-        else:
-            return('I')
+        roman_number = ""
+        while (number > 0):
+            roman_number += "I"
+            number -= 1
+        return roman_number
