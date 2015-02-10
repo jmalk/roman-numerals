@@ -66,6 +66,11 @@ class RomanNumeralTestCase(unittest.TestCase):
         result = self.testclass.generator(20)
         self.assertEqual(result, 'XX')
 
+    def test_MMMCMXCIX(self):
+        """ Does 3999 return MMMCMXCIX? """
+        result = self.testclass.generator(3999)
+        self.assertEqual(result, 'MMMCMXCIX')
+
 if __name__ == '__main__':
     unittest.main()
 
