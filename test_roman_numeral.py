@@ -31,6 +31,11 @@ class RomanNumeralTestCase(unittest.TestCase):
         result = self.testclass.generator(4)
         self.assertEqual(result, 'IV')
 
+    def test_five(self):
+        """ Does 5 return V? """
+        result = self.testclass.generator(5)
+        self.assertEqual(result, 'V')
+
 if __name__ == '__main__':
     unittest.main()
 
