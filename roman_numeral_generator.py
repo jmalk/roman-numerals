@@ -6,7 +6,9 @@ class RomanNumeralGenerator(object):
 
     def to_roman(self, number):
         roman_number = ""
-        if (number == 4):
+        if (number == 5):
+            roman_number = 'V'
+        elif (number == 4):
             roman_number = 'IV'
         else:
             while (number > 0):
