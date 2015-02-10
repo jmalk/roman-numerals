@@ -61,6 +61,10 @@ class RomanNumeralTestCase(unittest.TestCase):
         result = self.testclass.generator(10)
         self.assertEqual(result, 'X')
 
+    def test_twenty(self):
+        """ Does 20 return X? """
+        result = self.testclass.generator(20)
+        self.assertEqual(result, 'XX')
 
 if __name__ == '__main__':
     unittest.main()
