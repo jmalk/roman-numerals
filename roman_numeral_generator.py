@@ -8,24 +8,17 @@ class RomanNumeralGenerator(object):
         roman_number = ""
         arabic_remainder = number
 
-        if (arabic_remainder >= 10):
-            roman_number += 'X'
-            arabic_remainder -= 10
+        values = [10, 9, 5, 4]
+        symbols = ['X', 'IX', 'V', 'IV']
 
-        if (arabic_remainder >= 9):
-            roman_number = 'IX'
-            arabic_remainder -= 9
-
-        if (arabic_remainder >= 5):
-            roman_number += 'V'
-            arabic_remainder -= 5
-
-        if (arabic_remainder >= 4):
-            roman_number = 'IV'
-            arabic_remainder -= 4
+        for i in range(0, len(values)):
+            while (arabic_remainder >= values[i]):
+                roman_number += symbols[i]
+                arabic_remainder -= values[i]
 
         while (arabic_remainder > 0):
             roman_number += "I"
             arabic_remainder -= 1
 
         return roman_number
+
